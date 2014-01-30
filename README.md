@@ -7,7 +7,7 @@ The app will:
 * Create a new user called "guest"
 * Enable this app for the guest user account
 
-![Guest Mode Screenshot](https://lh4.googleusercontent.com/-0ry16sagScM/UuqY-mFpc3I/AAAAAAAAARg/ypc2tEZLY6I/w408-h766-no/guest_mode_screenshot_1_sm.png)![Guest Mode Screenshot](https://lh3.googleusercontent.com/-Y4gUk5omJQQ/UuqY-g4kFBI/AAAAAAAAARk/Zp3UlCTn1Vg/w408-h766-no/guest_mode_screenshot_2_sm.png)
+![Guest Mode Screenshot](https://lh6.googleusercontent.com/-wn1kaP88FHs/UuqZmzoatYI/AAAAAAAAASM/BTMruHDRYlo/w245-h460-no/guest_mode_screenshot_1_xs.png)![Guest Mode Screenshot](https://lh6.googleusercontent.com/--ukzN0VpWJU/UuqZmzS-naI/AAAAAAAAASQ/hkHMvlRjHy0/w245-h460-no/guest_mode_screenshot_2_xs.png)
 
 **This app requires a *rooted* device running Android 4.2+**
 
