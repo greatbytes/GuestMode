@@ -1,0 +1,80 @@
+<!--
+  Copyright 2014 Great Bytes Software
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/multiuser_support_status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiuser support is currently:" />
+    
+    <TextView
+        android:id="@+id/multiuser_support_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/multiuser_support_status_label"
+        android:text="Disabled" />
+
+    <Button
+        android:id="@+id/btnEnableMultiuserSupport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/multiuser_support_status_label"
+        android:layout_below="@+id/multiuser_support_status_label"
+        android:text="Enable Multiuser Support" />
+
+    <Button
+        android:id="@+id/btnCheckMultiuserSupport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/multiuser_support_status_label"
+        android:layout_below="@+id/btnEnableMultiuserSupport"
+        android:text="Check Multiuser Support" />
+    
+    <Button
+        android:id="@+id/btnSwitchToGuestUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/multiuser_support_status_label"
+        android:layout_below="@+id/btnCheckMultiuserSupport"
+        android:text="Switch to Guest User" />
+    
+    <Button
+        android:id="@+id/btnSwitchToMainUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/multiuser_support_status_label"
+        android:layout_below="@+id/btnSwitchToGuestUser"
+        android:text="Switch to Main User" />
+    
+    <Button
+        android:id="@+id/btnEnableAppForGuestUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/multiuser_support_status_label"
+        android:layout_below="@+id/btnSwitchToMainUser"
+        android:text="Enable app for guest user" />
+</RelativeLayout>
