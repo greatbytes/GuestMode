@@ -7,6 +7,8 @@ The app will:
 * Create a new user called "guest"
 * Enable this app for the guest user account
 
+![Guest Mode Screenshot](https://lh6.googleusercontent.com/-eeFTUxry3nQ/UuqXKzZ1JiI/AAAAAAAAAQ4/cguR51WjRpM/w557-h942-no/guest_mode_screenshot_1.png)![Guest Mode Screenshot](https://lh3.googleusercontent.com/-1IRzhPsOCFI/UuqXK_gEfBI/AAAAAAAAAQ8/dWBPn_3SqTo/w557-h942-no/guest_mode_screenshot_2.png)
+
 **This app requires a *rooted* device running Android 4.2+**
 
 If you want to be able to use the app's shortcut to switch *back* to the main user from the guest mode, please enable multi-user support in SuperSU (or your superuser-manager of choice). If you don't perform this step, you will have to reboot your phone to get back into your main account! It may be necessary to separately install this app for the guest after switching to the guest account for the first time. For security purposes, it is recommended *NOT* to enable the multi-user support in SuperSU (because the guest would then be able to execute root-commands). Make sure you enable a secure lockscreen option for the main user account!
