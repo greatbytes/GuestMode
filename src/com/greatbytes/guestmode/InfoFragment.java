@@ -24,7 +24,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 public class InfoFragment extends Fragment {
 
@@ -40,10 +39,6 @@ public class InfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_info, container, false);
-
-        TextView titleView = (TextView) rootView.findViewById(android.R.id.title);
-        titleView.setText(R.string.title_info);
-
         return rootView;
     }
 

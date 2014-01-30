@@ -28,28 +28,7 @@ public class TerminalUtils {
 
 	public static String TAG = "TerminalUtils";
 
-	public static void runAsRoot(String[] cmds){
-		Process p;
-		try {
-			p = Runtime.getRuntime().exec("su");
-			DataOutputStream os = new DataOutputStream(p.getOutputStream());  
-			BufferedReader bf = new BufferedReader(new InputStreamReader(p.getInputStream()));
-			for (String tmpCmd : cmds) {
-				os.writeBytes(tmpCmd + "\n");
-				String test;
-				while((test = bf.readLine()) != null)
-				{
-					Log.i(TAG, test);
-				}
-			}
-			os.flush();
-		} catch (IOException e) {
-			Log.e(TAG, "runAsRoot IOException: " + e.getMessage());
-		}
-	}
-
-	public static int createGuestUser()
-	{
+	public static int createGuestUser(){
 		Process p;
 		try {
 			p = Runtime.getRuntime().exec("su");
@@ -73,7 +52,7 @@ public class TerminalUtils {
 				}
 			}
 
-			Log.i(TAG, "out: " + out);
+			//Log.i(TAG, "out: " + out);
 
 			if(out.contains("Success:")){
 				out = out.replace("\n", "").replace("\r", "");
@@ -94,8 +73,7 @@ public class TerminalUtils {
 		return -1;
 	}
 
-	public static void switchUser(String id)
-	{
+	public static void switchUser(String id){
 		Process p;
 		try {
 			p = Runtime.getRuntime().exec("su");
@@ -109,7 +87,7 @@ public class TerminalUtils {
 		}
 	}
 
-	public static void reboot() {
+	public static void reboot(){
 		Process p;
 		try {
 			p = Runtime.getRuntime().exec("su");
@@ -123,8 +101,7 @@ public class TerminalUtils {
 		}
 	}
 
-	public static String[] getUserList()
-	{
+	public static String[] getUserList(){
 		Process p;
 		try {
 			p = Runtime.getRuntime().exec("su");
@@ -194,7 +171,7 @@ public class TerminalUtils {
 				}
 			}
 
-			Log.i(TAG, "out: " + out);
+			//Log.i(TAG, "out: " + out);
 
 			if(out.contains("Maximum supported users:")){
 				out = out.replace("\n", "").replace("\r", "");
@@ -209,9 +186,9 @@ public class TerminalUtils {
 			}
 
 		} catch (IOException e){
-			Log.e(TAG, "checkFeatureEnabled IOException: " + e.getMessage());
+			Log.e(TAG, "checkMultiUserEnabled IOException: " + e.getMessage());
 		} catch (Exception e){
-			Log.e(TAG, "checkFeatureEnabled Exception: " + e.getMessage());
+			Log.e(TAG, "checkMultiUserEnabled Exception: " + e.getMessage());
 		}
 		return false;
 	}

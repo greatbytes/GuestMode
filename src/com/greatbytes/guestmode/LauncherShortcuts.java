@@ -40,17 +40,17 @@ public class LauncherShortcuts extends Activity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        // Resolve the intent
+        //Resolve the intent
         final Intent intent = getIntent();
         final String action = intent.getAction();
 
-        // If the intent is a request to create a shortcut, we'll do that and exit
+        //If the intent is a request to create a shortcut, we'll do that and exit
         if (Intent.ACTION_CREATE_SHORTCUT.equals(action)) {
             setupShortcut();
             return;
         }
 
-        // If we weren't launched with a CREATE_SHORTCUT intent but with a "RebootNow"-extra, perform reboot
+        //If we weren't launched with a CREATE_SHORTCUT intent but with a "SWTICH"-action-extra, perform the switch
         String extra = intent.getStringExtra(EXTRA_KEY);
         if (extra.equals(ACTION_SWITCH_TO_GUEST)) {
     		Log.i(TAG, "SWITCH TO GUEST shortcut selected, switching...");

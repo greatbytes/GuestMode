@@ -48,21 +48,18 @@ public class SetupFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_setup, container, false);
+    		Bundle savedInstanceState) {
+    	View rootView = inflater.inflate(R.layout.fragment_setup, container, false);
 
-        TextView titleView = (TextView)rootView.findViewById(android.R.id.title);
-        titleView.setText(R.string.title_setup);
-        
-        btnSetup = (Button)rootView.findViewById(R.id.setup_button);
-        btnSetup.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View v) {
-				setupGuestMode();				
-			}
-        });
-        
-        return rootView;
+    	btnSetup = (Button)rootView.findViewById(R.id.setup_button);
+    	btnSetup.setOnClickListener(new OnClickListener(){
+    		@Override
+    		public void onClick(View v) {
+    			setupGuestMode();				
+    		}
+    	});
+
+    	return rootView;
     }
 
     @Override
@@ -91,7 +88,7 @@ public class SetupFragment extends Fragment {
     		return;
     	}
     	
-    	//Enable guestmode-app for user "guest"
+    	//Enable GuestMode-app for user "guest"
     	TerminalUtils.enableGuestModeAppForUser(String.valueOf(createdUserId));
     	
     	//Move to the next page if the feature was successfully enabled
@@ -99,7 +96,8 @@ public class SetupFragment extends Fragment {
     		Log.i(TAG, "Feature enabled successfully - move to last page");
     		((SetupActivity)getActivity()).advanceToLastPage();
     	} else {
-    		Log.e(TAG, "Enabling multiuser feature failed - show dialog");
+    		Log.e(TAG, "Enabling multiuser feature failed - show toast");
+    		Toast.makeText(getActivity(), R.string.error_checking_multiuser_support, Toast.LENGTH_LONG).show();
     	}
     }
 

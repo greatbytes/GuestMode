@@ -47,6 +47,7 @@
 	<string name="explanation_setup">To initialize guest mode, please tap on \"Setup Guest Mode\". This will:\n\n\t1. Enable multi-user mode on your device\n\t2. Create a new user called \"guest\"\n\t3. Enable this app for the guest user account</string>
 
 	<string name="error_creating_user">Guest user could not be created - please make sure you are rooted, have provided SU-rights to this app, and are running a \"near-stock\" version of Android 4.2+</string>
+	<string name="error_checking_multiuser_support">Could not check multiuser support - please make sure you are rooted, have provided SU-rights to this app, and are running a \"near-stock\" version of Android 4.2+</string>
 	
 	<string name="explanation_info">If you want to be able to use the app\'s shortcut to switch *back* to the main user from the guest mode, please enable multi-user support in SuperSU (or your superuser-manager of choice). If you don\'t perform this step, you will have to reboot your phone to get back into your main account! It may be necessary to separately install this app for the guest after switching to the guest account for the first time. For security purposes, it is recommended *NOT* to enable the multi-user support in SuperSU (because the guest would then be able to execute root-commands).\n\nMake sure you enable a secure lockscreen option for the main user account!</string>
 	

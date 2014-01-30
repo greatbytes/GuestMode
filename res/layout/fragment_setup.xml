@@ -17,8 +17,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/WizardPageContainer">
 
-    <TextView style="@style/WizardPageTitle" />
-
+    <TextView
+        style="@style/WizardPageTitle"
+        android:text="@string/title_setup" />
    
     <TextView
         android:id="@+id/tvSetup"

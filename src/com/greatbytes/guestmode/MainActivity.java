@@ -47,11 +47,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
-		
 		setContentView(R.layout.activity_main);
-
-		setProgressBarIndeterminateVisibility(false);
 		
 		Button btnSwitchToGuestUser = (Button)findViewById(R.id.switch_to_guest_button);
 		btnSwitchToGuestUser.setOnClickListener(new OnClickListener(){
@@ -119,7 +115,7 @@ public class MainActivity extends Activity {
     	.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener(){
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				//Exit the app
+				//User did not agree to disclaimer, exit the app
 				finish();
 			}
     	}) 

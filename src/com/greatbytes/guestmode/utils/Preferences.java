@@ -31,7 +31,6 @@ public class Preferences implements OnSharedPreferenceChangeListener {
 	private boolean mIsFirstLaunch;
 	private int mGuestUserId;
 	
-	private Context mContext;
 	
 	/**
 	 * Section for singleton pattern
@@ -40,8 +39,6 @@ public class Preferences implements OnSharedPreferenceChangeListener {
 	private Preferences(Context context) {
 		mPref = PreferenceManager.getDefaultSharedPreferences(context);
 		mPref.registerOnSharedPreferenceChangeListener(this);
-		
-		mContext = context;
 		
 		reloadPreferences();
 	}

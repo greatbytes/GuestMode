@@ -143,7 +143,6 @@ public class SetupActivity extends FragmentActivity {
 
 		@Override
 		public int getItemPosition(Object object) {
-			// TODO: be smarter about this
 			if (object == mPrimaryItem) {
 				// Re-use the current fragment (its position never changes)
 				return POSITION_UNCHANGED;
@@ -155,7 +154,7 @@ public class SetupActivity extends FragmentActivity {
 		@Override
 		public void setPrimaryItem(ViewGroup container, int position, Object object) {
 			super.setPrimaryItem(container, position, object);
-			mPrimaryItem = (Fragment) object;
+			mPrimaryItem = (Fragment)object;
 		}
 
 		@Override
